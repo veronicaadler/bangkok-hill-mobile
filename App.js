@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Constants from 'expo-constants';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { Icon } from 'react-native-elements';
 import HomeScreen from './components/HomeScreen';
 import MenuScreen from './components/MenuScreen';
 import AboutScreen from './components/AboutScreen';
@@ -8,24 +9,33 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator} from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 
-function Logo() {
-  return(
-      <Image 
-        source={require('./assets/blacklogo.png')}
-        style={{alignSelf: 'center'}}
-      />
-  )
-}
-
 const HomeNavigator = createStackNavigator(
   { Home: HomeScreen },
   {
-    defaultNavigationOptions: {
+    defaultNavigationOptions: ({navigation}) => ({
       headerStyle: {
         backgroundColor: '#fba75b',
       },
-      headerTitle: () => <Logo />,
-    }},
+      headerTitle: (
+        <View style={{flex:1, flexDirection:'row', justifyContent:'center'}}>
+            <Image
+                source={require('./assets/blacklogo.png')}
+            />
+        </View>),
+        headerLeft: (
+          
+          <Icon
+                name='bars'
+                type='font-awesome'
+                onPress={() => navigation.toggleDrawer()}
+                iconStyle={{marginLeft: 10,
+                fontSize: 24, color: '#324443'}}
+                
+            />
+       ), 
+          headerRight: <View></View>
+    }),
+    },
 )
 
 const MenuNavigator = createStackNavigator(
@@ -71,32 +81,3 @@ export default function App() {
 }
 
 const AppNavigator = createAppContainer(SideNavigator)
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  image: {
-    width: '100%',
-    height: 300,
-    justifyContent: 'center'
-  },
-  title: {
-    alignSelf: 'center',
-    color: 'white',
-    textShadowColor: '#333',
-    textShadowOffset: { width: -1, height: 0 },
-    textShadowRadius: 10, 
-    fontSize: 50
-
-  },
-  subtitle: {
-    alignSelf: 'center',
-    color: 'white',
-    textShadowColor: '#333',
-    textShadowOffset: { width: -1, height: 0 },
-    textShadowRadius: 10, 
-    fontSize: 20
-  }
-});
