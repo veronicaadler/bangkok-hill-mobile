@@ -1,19 +1,10 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import ContactScreen from './ContactScreen';
 import HomeScreen from './HomeScreen';
 import HoursScreen from './HoursScreen';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
-
-  
-  function ContactScreen() {
-    return (
-      <View>
-        <Text>Hello World</Text>
-      </View>
-    )
-  }
-
 
 const HomeTabNavigator = createBottomTabNavigator(
     {
