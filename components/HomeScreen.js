@@ -47,7 +47,7 @@ function HomeScreen() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#324443'
+      backgroundColor: 'white'
     },
     image: {
       width: '100%',
@@ -72,10 +72,9 @@ const styles = StyleSheet.create({
       fontSize: 20
     },
     item: {
-      backgroundColor: '#f0f7f1',
+      backgroundColor: 'white',
       margin: 7,
-      borderWidth: 2,
-      borderColor: 'white',
+      marginTop: 12,
       paddingTop: 10,
     }
   });
