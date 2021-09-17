@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Card } from 'react-native-elements';
 
 function HoursScreen() {
     return (
-      <View>
+      <ScrollView style={{backgroundColor: '#f0f7f1'}}>
         <Card 
             title='Hours'
             image={{
@@ -19,7 +19,7 @@ function HoursScreen() {
         <Text style={styles.text}>Sun: 11:30am-9:30pm {"\n"}</Text>
         <Text style={styles.text}>Mon: Closed</Text>
         </Card>
-      </View>
+      </ScrollView>
     )
   }
 

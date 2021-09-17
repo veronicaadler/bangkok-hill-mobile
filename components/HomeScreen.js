@@ -8,7 +8,6 @@ function HomeScreen() {
 
 
     const renderCardDeck = ({item}) => {
-      console.log('rendered')
       return (
         <ListItem
           containerStyle={styles.item}
@@ -34,7 +33,7 @@ function HomeScreen() {
             color='#ca615c'
             />
           <View>
-          <FlatList style={styles.flatlist}
+          <FlatList
             data={CardDeckInfo}
             renderItem={renderCardDeck}
             keyExtractor={item => item.id.toString()}

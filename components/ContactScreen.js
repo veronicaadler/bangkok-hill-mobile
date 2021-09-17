@@ -4,7 +4,7 @@ import { Card } from 'react-native-elements';
 
 function ContactScreen() {
     return (
-      <View>
+      <View style={{backgroundColor: '#f0f7f1'}}>
         <Card 
             title='Contact Us'
         >
