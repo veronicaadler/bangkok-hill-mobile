@@ -15,7 +15,17 @@ function FullMenuTab() {
       }
       
       const renderStarters = ({ item }) => {
-        if (item.spice) {
+        if (item.lunchprice && item.spice) {
+            return (
+            <ListItem 
+                containerStyle={styles.item}
+                title={`${item.title} (${item.spice})`}
+                subtitle={item.description}
+                rightSubtitle={`Lunch\n$ ${item.lunchprice}\nDinner\n$ ${item.dinnerprice}`}
+                leftIcon={{name:'fire', type:'font-awesome'}}
+                />
+            )
+        } else if (item.spice) {
             return (
                 <ListItem 
                 containerStyle={styles.item}
@@ -25,7 +35,25 @@ function FullMenuTab() {
                 leftIcon={{name:'fire', type:'font-awesome'}}
                 />
             )
-        } else {
+        } else if (item.lunchprice) {
+            return (
+                <ListItem 
+                containerStyle={styles.item}
+                title={`${item.title}`}
+                subtitle={item.description}
+                rightSubtitle={`Lunch\n$ ${item.lunchprice}\nDinner\n$ ${item.dinnerprice}`}
+                />
+            )
+        }
+        if (item.price === null) {
+            return (
+                <ListItem 
+                containerStyle={styles.sectionsubtitle}
+                title={`${item.description}`}
+                />
+            )
+        }
+        else {
             return (
                 <ListItem 
                         containerStyle={styles.item}
@@ -69,6 +97,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
     },
     item: {
+        backgroundColor: '#f0f7f0'
+    },
+    sectionsubtitle: {
+        alignSelf: 'center',
+        fontSize: 15,
         backgroundColor: '#f0f7f0'
     }
 }
