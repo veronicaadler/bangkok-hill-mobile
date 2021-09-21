@@ -90,7 +90,7 @@ const Menu = [
             ]
     },
     {
-        title: 'SOUPS',
+        title: 'Soups',
         data: [
                 {
                     id: 0,
@@ -126,7 +126,7 @@ const Menu = [
             ]
     },
     {
-        title: 'NOODLES & RICE',
+        title: 'Noodles & Rice',
         data: [
                 {
                     id: 0,
@@ -239,7 +239,6 @@ const Menu = [
             {
                 id: 0,
                 description: 'Served with your choice of protein and white or brown rice.',
-                price: null
             },
             {
                 id: 1,
@@ -265,10 +264,370 @@ const Menu = [
                 title: 'Flounder Fillet',
                 lunchprice: '10.00',
                 dinnerprice: '20.00'
+            },
+            {
+                id: 5,
+                title: 'Yellow Curry',
+                spice: 'Mild',
+                description: 'Peppers, pineapple chunks, yellow squash, zucchini, tomatoes and onions.'
+            },
+            {
+                id: 6,
+                title: 'Rama Garden',
+                description: 'Steamed assorted vegetable and a side of peanut sauce.'
+            },
+            {
+                id: 7,
+                title: 'Garlic',
+                description: 'Onion, peppers, tomatoes, snow peas and crispy garlic.'
+            },
+            {
+                id: 8,
+                title: 'Massaman Curry',
+                description: 'Peppers, potato, onions, carrots, yellow squash and peanut.',
+                spice: 'Mild'
+            },
+            {
+                id: 9,
+                title: 'Sweet and Sour',
+                description: 'Cucumbers, onions, tomatoes, pineapple chunks and scallions.',
+            },
+            {
+                id: 10,
+                title: 'Seafood Rama Garden',
+                description: 'Steamed assorted vegetables and a side of peanut sauce.',
+                spice: 'Mild'
+            },
+            {
+                id: 11,
+                title: 'Peppers',
+                description: 'Assorted peppers, onions and mushrooms.',
+            },
+            {
+                id: 12,
+                title: 'Red Curry',
+                description: 'Peppers, bamboo shoots, eggplants, string beans and basil leaves.',
+                spice: 'Mild'
+            },
+            {
+                id: 13,
+                title: 'Broccoli',
+                description: 'Broccoli, carrots and mushrooms.'
+            },
+            {
+                id: 14,
+                title: 'Basil',
+                description: 'Onions, peppers, mushrooms and basil leaves.',
+                spice: 'Hot'
+            },
+            {
+                id: 15,
+                title: 'Panang Curry',
+                description: 'Peppers, green peas, baby corns, snow peas, mushroom and basil leaves.',
+                spice: 'Mild'
+            },
+            {
+                id: 16,
+                title: 'Ginger',
+                description: 'Shredded gingers, onions, mushrooms,peppers, and yellow bean sauce',
+                spice: 'Mild'
             }
         ]
-
+    },
+    {
+        title: 'House Specials',
+        data: [
+            {
+                id: 0,
+                description: 'Served with your choice of white or brown rice.'
+            },
+            {
+                id: 1,
+                title: 'Chicken Cashew Nuts',
+                description: 'Sauteed chicken with peppers, pineapple chunks, onions, mushrooms, scallions, cashew nuts, and pik pow chili sauce.',
+                price: '13.00',
+                spice: 'Mild'
+            },
+            {
+                id: 2,
+                title: 'Chicken Gaprow',
+                description: 'Thai style stir-fried minced chicken with chili sauce, red and green peppers, red onions, and basil leaves.',
+                price: '13.00',
+                spice: 'Mild'
+            },
+            {
+                id: 3,
+                title: 'Siamese Twin',
+                description: 'Sauteed chicken and shrimp with peppers, onions, scallions, snow peas, and tomatoes in spicy sweet and sour sauce.',
+                price: '14.00'
+            },
+            {
+                id: 4,
+                title: 'Beef Macadamia',
+                description: 'Marinated sliced beef with red peppers, mushrooms, shredded gingers, carrots, and scallions on bed of fresh watercress, napa top with macadamia nuts.',
+                price: '14.00',
+                spice: 'Mild'
+            },
+            {
+                id: 5,
+                title: 'Pad Pik King',
+                description: 'Stir-fried chicken and shrimp with crispy string beans, carrots, red peppers and red curry paste in tasty brown sauce topped with cashew nuts.',
+                price: '14.00',
+                spice: 'Hot'
+            },
+            {
+                id: 6,
+                title: 'Bangkok Chicken',
+                description: 'Lightly battered bite size chicken glazed with homemade chef sauce, served with sautéed vegetables.',
+                price: '13.00'
+            },
+            {
+                id: 7,
+                title: 'Crispy Chicken Basil',
+                description: 'Crispy battered chicken sauteed with onions, red & green peppers in spicy balls sauce.',
+                price: '14.00'
+            },
+            {
+                id: 8,
+                title: 'Crispy Duck',
+                description: 'Half boneless crispy duck, glazed with homemade Chef’s sauce, served with sautéed vegetables.',
+                price: '19.00'
+            },
+            {
+                id: 9,
+                title: 'Friendship',
+                description: 'Sauteed sliced chicken, beef, and pork with tomatoes, green peas, mushrooms and pineapple chunks in plum sauce, served on Sizzling hot plate.',
+                price: '14.00'
+            },
+            {
+                id: 10,
+                title: 'Orange Chicken',
+                description: 'Crispy battered chicken glazed with homemade orange sauce, served with broccoli, carrots and baby corn.',
+                price: '13.00'
+            },
+            {
+                id: 11,
+                title: 'Mango Curry',
+                description: 'Fresh cubes mango simmered in yellow curry with chicken, shrimp, onions, peppers, yellow squash and tomatoes.',
+                price: '14.00',
+                spice: 'Mild'
+            },
+            {
+                id: 12,
+                title: 'Thai BBQ',
+                description: 'Grilled marinated chicken breast, served with green papaya salad, sticky rice and chili dipping sauce.',
+                price: '14.00',
+            },
+            {
+                id: 13,
+                title: 'Wild Boar Basil',
+                description: 'Sauteed sliced pork with peppercorn, mushrooms, onions, peppers, basil leaves and Thai herbs.',
+                price: '14.00',
+                spice: 'Hot'
+            },
+            {
+                id: 14,
+                title: 'Duck Choo Chee',
+                description: 'Sliced roasted duck in tasty choo chee curry sauce with snow peas, tomatoes, peppers, pineapple chunks and shredded lime leaves.',
+                price: '19.00',
+                spice: 'Mild'
+            },
+            {
+                id: 15,
+                title: 'Tamarind Duck',
+                description: 'Sauteed sliced boneless duck in sweet tamarind sauce with pineapple, peppers, onions, mushrooms, gingers, green peas, tomatoes, scallions, and snow peas.',
+                price: '19.00',
+            },
+        ]
+    },
+    {
+        title: 'From the Sea',
+        data: [
+            {
+                id: 0,
+                description: 'Served with your choice of white or brown rice.'
+            },
+            {
+                id: 1,
+                title: 'Spicy Catfish',
+                description: 'Lightly battered fillet pieces of catfish quick sauteed with red and green peppers, string beans, basil leaves and Thai herbs.',
+                price: '18.00',
+                spice: 'Mild'
+            },
+            {
+                id: 2,
+                title: 'Siam Chili Fish',
+                description: 'Lightly battered Tilapia fillet glazed with sweet chili sauce topped with crispy basil.',
+                price: '18.00',
+                spice: 'Mild'
+            },
+            {
+                id: 3,
+                title: 'Siam Madness',
+                description: 'Sauteed shrimp, scallop, squid, salmon fillet and fresh mussels with onions, peppers, mushrooms in hot basil chili sauce, served on Sizzling hot plate.',
+                price: '19.00',
+                spice: 'Hot and Spicy'
+            },
+            {
+                id: 4,
+                title: 'Spicy Mussels',
+                description: 'Lightly battered fillet pieces of catfish quick sauteed with red and green peppers, string beans, basil leaves and Thai herbs.',
+                price: '18.00',
+                spice: 'Hot'
+            },
+            {
+                id: 5,
+                title: 'Steamed Ginger Fish',
+                description: 'Steamed tilapia fillet with onions, shredded gingers, mushrooms, scallions and red peppers in ginger soy sauce.',
+                price: '18.00',
+                spice: 'Mild'
+            },
+            {
+                id: 6,
+                title: 'Steamed Lime Tilapia',
+                description: 'Sauteed shrimp, scallop, squid, salmon fillet and fresh mussels with onions, peppers, mushrooms in hot basil chili sauce, served on Sizzling hot plate.',
+                price: '19.00',
+                spice: 'Hot'
+            },
+            {
+                id: 7,
+                title: 'Spicy Mussels',
+                description: 'Lightly battered fillet pieces of catfish quick sauteed with red and green peppers, string beans, basil leaves and Thai herbs.',
+                price: '18.00',
+                spice: 'Hot'
+            },
+            {
+                id: 8,
+                title: 'Paradise Shrimp',
+                description: 'Large shrimp sautéed in yellow curry sauce with onions, tomatoes, pineapple chunks, scallions, and egg, topped with crispy garlic.',
+                price: '16.00',
+                spice: 'Mild'
+            },
+            {
+                id: 9,
+                title: 'Shrimp De Emerald',
+                description: 'Sauteed large shrimp with fresh mushroom, red peppers, shredded ginger, and scallions, served on bed of steamed broccoli.',
+                price: '16.00'
+            },
+            {
+                id: 10,
+                title: 'Bangkok Salmon',
+                description: 'Grilled salmon fillet and glazed with sweet chili sauce, served with steamed broccoli.',
+                price: '18.00'
+            },
+            {
+                id: 11,
+                title: 'Curry Salmon',
+                description: 'Steamed salmon fillet, glazed with house yellow curry sauce served with steamed broccoli, cauliflower, and sweet potatoes tempura.',
+                price: '18.00',
+                spice: 'Mild'
+            },
+            {
+                id: 12,
+                title: 'Scallop Pik Pow',
+                description: 'Sauteed sea scallop with onions, peppers, and scallions in pik pow sauce.',
+                price: '16.00',
+                spice: 'Mild'
+            }
+        ]
+    },
+    {
+       title: 'Side Orders',
+       data: [
+           {
+               id: 0,
+               title: 'White Rice',
+               price: '2.00'
+           },
+           {
+               id: 1,
+               title: 'Brown Rice',
+               price: '2.00'
+           },
+           {
+               id: 2,
+               title: 'Sticky Rice',
+               price: '3.00'
+           }
+       ]
+    },
+    {
+        title: 'Kid\'s Menu',
+        data: [
+            {
+                id: 0,
+                title: 'Kid\'s MENU 1',
+                description: 'Chicken finger & (F) Shumai Combo with rice and milk or orange juice.',
+                price: '8.00'
+            },
+            {
+                id: 1,
+                title: 'Kid\'s MENU 2',
+                description: 'Chicken Teriyaki & (F) Shumai Combo with rice and milk or orange juice.',
+                price: '8.00'
+            }
+        ]
+    },
+    {
+        title: 'Beverages',
+        data: [
+            {
+                id: 0,
+                title: 'Soda',
+                description: 'Coke, Diet Coke, Sprite, Ginger Ale or Root Beer',
+                price: '2.00'
+            },
+            {
+                id: 1,
+                title: 'Milk / Chocolate Milk',
+                price: '2.00'
+            },
+            {
+                id: 2,
+                title: 'Thai Iced Tea / Coffee',
+                price: '2.50'
+            },
+            {
+                id: 3,
+                title: 'Hot Thai Tea / Coffee',
+                price: '2.00'
+            },
+            {
+                id: 4,
+                title: 'Juice',
+                price: '2.00' 
+            }
+        ]
+    },
+    {
+        title: 'Desserts',
+        data: [
+            {
+                id: 0,
+                title: 'Ice Cream',
+                description: 'Ginger or Coconut (add sticky rice for an additional $2.00)',
+                price: '3.00'
+            },
+            {
+                id: 1,
+                title: 'Fried Banana',
+                description: '(add ice cream for an additional $3.00)',
+                price: '5.00'
+            },
+            {
+                id: 2,
+                title: 'Fried Ice Cream',
+                price: '5.00'
+            },
+            {
+                id: 3,
+                title: 'Mango with Sticky Rice',
+                price: '5.00',
+                description: '(add ice cream for an additional $3.00)'
+            }
+        ]
     }
+
  
 
     

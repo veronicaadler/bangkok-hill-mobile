@@ -1,9 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, Button, ImageBackground, SectionList } from 'react-native';
-import { Divider, ListItem, Rating, Icon } from 'react-native-elements'
+import { StyleSheet, Text, View, SectionList, Image } from 'react-native';
+import { Divider, ListItem } from 'react-native-elements'
 import Menu from '../shared/menu'
 
 function FullMenuTab() {
+
+    const renderMenuHeading = () => {
+        return (
+            <View>
+                <Text style={styles.menuheader}>BANGKOK HILL MENU</Text>
+                <Image 
+                style={styles.logo}
+                source={require('../assets/menu.png')}
+                />
+            </View>
+        )
+    }
 
       const renderSectionHeaders = ({ section: { title } }) => {
           return (
@@ -22,6 +34,15 @@ function FullMenuTab() {
                 title={`${item.title} (${item.spice})`}
                 subtitle={item.description}
                 rightSubtitle={`Lunch\n$ ${item.lunchprice}\nDinner\n$ ${item.dinnerprice}`}
+                leftIcon={{name:'fire', type:'font-awesome'}}
+                />
+            )
+        } else if (!item.price && item.spice) {
+            return (
+                <ListItem 
+                containerStyle={styles.item}
+                title={`${item.title} (${item.spice})`}
+                subtitle={item.description}
                 leftIcon={{name:'fire', type:'font-awesome'}}
                 />
             )
@@ -45,11 +66,28 @@ function FullMenuTab() {
                 />
             )
         }
-        if (item.price === null) {
+        if (!item.title) {
             return (
                 <ListItem 
-                containerStyle={styles.sectionsubtitle}
+                containerStyle={styles.item}
                 title={`${item.description}`}
+                />
+            )
+        } else if (!item.description) {
+            return (
+                <ListItem 
+                        containerStyle={styles.item}
+                        title={`${item.title}`}
+                        rightSubtitle={`$${item.price}`}
+                />
+            )
+        }
+        if (!item.price) {
+            return (
+                <ListItem 
+                containerStyle={styles.item}
+                title={`${item.title}`}
+                subtitle={item.description}
                 />
             )
         }
@@ -57,7 +95,7 @@ function FullMenuTab() {
             return (
                 <ListItem 
                         containerStyle={styles.item}
-                        title={item.title}
+                        title={`${item.title}`}
                         subtitle={item.description}
                         rightSubtitle={`$${item.price}`}
                 />
@@ -72,6 +110,7 @@ function FullMenuTab() {
                 renderItem={renderStarters}
                 renderSectionHeader={renderSectionHeaders}
                 keyExtractor={item => item.id.toString()}
+                ListHeaderComponent={renderMenuHeading}
             />
         </View>
     )
@@ -95,14 +134,20 @@ const styles = StyleSheet.create({
     },
     divider: {
         backgroundColor: 'black',
+        marginBottom: 20
     },
     item: {
         backgroundColor: '#f0f7f0'
     },
-    sectionsubtitle: {
+    menuheader: {
         alignSelf: 'center',
-        fontSize: 15,
-        backgroundColor: '#f0f7f0'
+        fontSize: 27,
+        marginTop: 20,
+        marginBottom: 20
+    },
+    logo: {
+        height: 100,
+        alignSelf: 'center'
     }
 }
 )
