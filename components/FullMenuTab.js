@@ -7,12 +7,12 @@ function FullMenuTab() {
 
     const renderMenuFooter = () => {
         return (
-            <View styles={styles.footer}>
+            <View style={{marginBottom: 10}}>
                 <Icon style={{marginTop: 50, marginBottom: 10}}
                 name="fire"
                 type="font-awesome"/>
                 <Text style={{alignSelf: 'center', fontSize: 15, marginBottom: 5}}>Please note:</Text>
-                <Text style={{textAlign: 'center', fontSize: 13, marginBottom: 10}}>All spicy dishes range in heat level.  Mild indicates light heat, Hot indicates moderate, and Hot and Spicy indicates our hottest items.</Text>
+                <Text style={{textAlign: 'center', fontSize: 13, marginBottom: 10}}>All spicy dishes range in heat level.  Mild indicates light heat, Hot indicates moderate, and Hot and Spicy are our hottest items.</Text>
             </View>
         )
     }
@@ -52,37 +52,38 @@ function FullMenuTab() {
         } else if (!item.price && item.spice) {
             return (
                 <ListItem 
-                containerStyle={styles.item}
-                title={`${item.title} (${item.spice})`}
-                subtitle={item.description}
-                leftIcon={{name:'fire', type:'font-awesome'}}
+                    containerStyle={styles.item}
+                    title={`${item.title} (${item.spice})`}
+                    subtitle={item.description}
+                    leftIcon={{name:'fire', type:'font-awesome'}}
                 />
             )
         } else if (item.spice) {
             return (
                 <ListItem 
-                containerStyle={styles.item}
-                title={`${item.title} (${item.spice})`}
-                subtitle={item.description}
-                rightSubtitle={`$${item.price}`}
-                leftIcon={{name:'fire', type:'font-awesome'}}
+                    containerStyle={styles.item}
+                    title={`${item.title} (${item.spice})`}
+                    subtitle={item.description}
+                    rightSubtitle={`$${item.price}`}
+                    leftIcon={{name:'fire', type:'font-awesome'}}
                 />
             )
         } else if (item.lunchprice) {
             return (
                 <ListItem 
-                containerStyle={styles.item}
-                title={`${item.title}`}
-                subtitle={item.description}
-                rightSubtitle={`Lunch\n$ ${item.lunchprice}\nDinner\n$ ${item.dinnerprice}`}
+                    containerStyle={styles.item}
+                    title={`${item.title}`}
+                    subtitle={item.description}
+                    rightSubtitle={`Lunch\n$ ${item.lunchprice}\nDinner\n$ ${item.dinnerprice}`}
                 />
             )
         }
         if (!item.title) {
             return (
                 <ListItem 
-                containerStyle={styles.item}
-                title={`${item.description}`}
+                    containerStyle={styles.sectiondescription}
+                    title={`${item.description}`}
+                    titleStyle={{alignSelf: 'center', fontSize: 15}}
                 />
             )
         } else if (!item.description) {
@@ -97,19 +98,19 @@ function FullMenuTab() {
         if (!item.price) {
             return (
                 <ListItem 
-                containerStyle={styles.item}
-                title={`${item.title}`}
-                subtitle={item.description}
+                    containerStyle={styles.item}
+                    title={`${item.title}`}
+                    subtitle={item.description}
                 />
             )
         }
         else {
             return (
                 <ListItem 
-                        containerStyle={styles.item}
-                        title={`${item.title}`}
-                        subtitle={item.description}
-                        rightSubtitle={`$${item.price}`}
+                    containerStyle={styles.item}
+                    title={`${item.title}`}
+                    subtitle={item.description}
+                    rightSubtitle={`$${item.price}`}
                 />
             )
         }
@@ -142,12 +143,12 @@ const styles = StyleSheet.create({
     },
     subtitle: {
         alignSelf: 'center',
-        fontSize: 17,
+        fontSize: 20,
         marginTop: 30,
     },
     divider: {
         backgroundColor: 'black',
-        marginBottom: 20
+        marginBottom: 30
     },
     item: {
         backgroundColor: '#f0f7f0'
@@ -162,8 +163,11 @@ const styles = StyleSheet.create({
         height: 100,
         alignSelf: 'center'
     },
-    footer: {
-        flexDirection: 'row'
+    sectiondescription: {
+        backgroundColor: '#f0f7f0',
+        marginTop: -20,
+        paddingTop: 4
+
     }
 }
 )
