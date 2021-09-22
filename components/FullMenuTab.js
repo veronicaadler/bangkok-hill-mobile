@@ -1,9 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, SectionList, Image } from 'react-native';
-import { Divider, ListItem } from 'react-native-elements'
+import { Divider, ListItem, Icon } from 'react-native-elements'
 import Menu from '../shared/menu'
 
 function FullMenuTab() {
+
+    const renderMenuFooter = () => {
+        return (
+            <View styles={styles.footer}>
+                <Icon style={{marginTop: 50, marginBottom: 10}}
+                name="fire"
+                type="font-awesome"/>
+                <Text style={{alignSelf: 'center', fontSize: 15, marginBottom: 5}}>Please note:</Text>
+                <Text style={{textAlign: 'center', fontSize: 13, marginBottom: 10}}>All spicy dishes range in heat level.  Mild indicates light heat, Hot indicates moderate, and Hot and Spicy indicates our hottest items.</Text>
+            </View>
+        )
+    }
 
     const renderMenuHeading = () => {
         return (
@@ -111,6 +123,7 @@ function FullMenuTab() {
                 renderSectionHeader={renderSectionHeaders}
                 keyExtractor={item => item.id.toString()}
                 ListHeaderComponent={renderMenuHeading}
+                ListFooterComponent={renderMenuFooter}
             />
         </View>
     )
@@ -148,6 +161,9 @@ const styles = StyleSheet.create({
     logo: {
         height: 100,
         alignSelf: 'center'
+    },
+    footer: {
+        flexDirection: 'row'
     }
 }
 )
