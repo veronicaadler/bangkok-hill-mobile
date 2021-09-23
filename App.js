@@ -1,6 +1,6 @@
 import React from 'react';
 import Constants from 'expo-constants';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { View, Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 import MenuScreen from './components/MenuScreen';
 import AboutScreen from './components/AboutScreen';

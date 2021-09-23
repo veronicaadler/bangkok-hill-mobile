@@ -8,8 +8,8 @@ import { createAppContainer } from 'react-navigation';
 
 const HomeTabNavigator = createBottomTabNavigator(
     {
-      Hours: HoursScreen,
       Home: HomeScreen,
+      Hours: HoursScreen,
       Contact: ContactScreen
     },
     {
@@ -20,8 +20,7 @@ const HomeTabNavigator = createBottomTabNavigator(
       inactiveTintColor: 'black',
       labelStyle: {fontSize: 14},
       tabStyle: {paddingBottom: 10}
-      
-    }}
+    }},
 )
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button, ImageBackground, FlatList } from 'react-native';
-import { Card, ListItem } from 'react-native-elements';
+import { StyleSheet, Text, View, ImageBackground, FlatList, ScrollView } from 'react-native';
+import { ListItem, Input, Button, Icon} from 'react-native-elements';
 import CardDeckInfo from '../shared/carddeckinfo';
 
 
@@ -20,7 +20,7 @@ function HomeScreen() {
     }
 
       return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
           <ImageBackground
             source={{uri: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'}}
             style={styles.image}
@@ -30,7 +30,7 @@ function HomeScreen() {
           </ImageBackground>
           <Button style={styles.orderbutton}
             title='Order Now'
-            color='#ca615c'
+            buttonStyle={{backgroundColor: '#ca615c'}}
             />
           <View>
           <FlatList
@@ -39,7 +39,27 @@ function HomeScreen() {
             keyExtractor={item => item.id.toString()}
           />
           </View>
-        </View>
+          <View style={{textAlign: 'center'}}>
+          <Input 
+            label="Subscribe to Our Newsletter"
+            labelStyle={{alignSelf: 'center', fontSize: 20}}
+            placeholder="username@gmail.com"
+            containerStyle={{marginTop: 25, marginBottom: -12}}
+            inputStyle={{textAlign: 'center'}}
+          />
+          <Button 
+          title="Subscribe"
+          buttonStyle={{backgroundColor: '#324443'}}
+          raised
+          icon={
+            <Icon 
+            type='font-awesome'
+            name='envelope-o'
+            />
+          }
+          />
+          </View>
+        </ScrollView>
       )
 }
 
